@@ -34,10 +34,10 @@ module.exports.run = function (msg) {
 			let color = colorConfig.neutral;
 			if (Object.keys(thisServer).length) {
 				color = colorConfig.good;
-				response.value = ":white_check_mark: All set for **" + msg.guild.name + "**. \n\nFeel free to run `!time help` for configuration & more information.";
+				response.value = ":white_check_mark: Berhasil di atur untuk **" + msg.guild.name + "**. \n\nFITUR LAINNYA `*ime help` untuk pengaturan dan informasi lainnya .";
 			} else {
 				color = colorConfig.bad;
-				response.value = ":exclamation: Not yet configured. \n\nPlease run `!time start` to get set up. It's a super quick process.";
+				response.value = ":exclamation: Belum Di Atur Silahkan. \n\nKetik `*time start` Untuk Menaktifkan";
 			}
 			msg.channel.send(new Discord.RichEmbed({
 				color: color,
@@ -57,16 +57,16 @@ module.exports.run = function (msg) {
 						msg.channel.send(new Discord.RichEmbed({
 							color: colorConfig.good,
 							title: botConfig.title,
-							description: 'Initial setup for **' + msg.guild.name + '**',
+							description: 'Pengaturan untuk Server **' + msg.guild.name + '**',
 							url: '',
 							fields: [{
-								name: 'Adding server to our database..',
+								name: 'Menambahkan server ke  database..',
 								value: "It looks like this server is in **" + msg.guild.region + "**, so to speed up the process we're setting your default timezone to **" + defaultConfig.zones[msg.guild.region] + "**. \n\n" +
 										"If this is incorrect, or you would like to customize the timezone further, `!time zone` will provide you with more information. You can also use `!time format` to change how the time/date is displayed. \n\n:thumbsup: That's it! You're good to go."
 							}]
 						}));
 						let thisServer = {};
-						console.log("Setting defaults for " + msg.guild.name);
+						console.log("Pengaturan Default untuk  " + msg.guild.name);
 						if(defaultConfig.zones[msg.guild.region]) {
 							thisServer.zone = defaultConfig.zones[msg.guild.region];
 						} else {
@@ -109,7 +109,7 @@ module.exports.run = function (msg) {
 								description: ' ',
 								url: '',
 								fields: [{
-									name: 'Sorry, that\'s not a valid timezone. \nRun `!time zone` for full details.',
+									name: 'Sorry, that\'s not a valid timezone. \nRun `*time zone` for full details.',
 									value: "For now, we're sticking with " + thisServer.zone
 								}]
 							}));
@@ -159,13 +159,13 @@ module.exports.run = function (msg) {
 							'**Preview**: ' + moment().tz(thisServer.zone).format(thisServer.format) + '\n' +
 							'_Original config was done by ' + thisServer.owner + "_";
 				} else {
-					botServer.value = "No configuration found! Please run `!time start` first.";
+					botServer.value = "No configuration found! Please run `*time start` first.";
 				}
 				msg.channel.send(new Discord.RichEmbed({
 					color: colorConfig.neutral,
 					title: botConfig.title,
 					url: '',
-					description: '`!time server` Details about the bot\'s configuration on this server.',
+					description: '`*time server` Details about the bot\'s configuration on this server.',
 					fields: [
 						botServer,
 						{
@@ -189,13 +189,13 @@ module.exports.run = function (msg) {
 					},
 					{
 						name: 'Commands',
-						value: '`!time help` Show this help menu' + '\n' +
-							'`!time server` Show details about the bot\'s config' + '\n' +
+						value: '`time help` Bantuan' + '\n' +
+							'`*time server` Show details about the bot\'s config' + '\n' +
 							(hasPerms ? '`!time zone [region]` Set the timezone' + '\n' : '') +
 							(hasPerms ? '`!time format [layout]` Set the time/date format' + '\n' : '') +
-							'`!time defaults` Show the default configuration' + '\n' + 
-							'`!time bot` Show general bot statistics' + '\n' + 
-							'`!time in [region]` Show the time in a zone' + '\n'
+							'`*time defaults` Show the default configuration' + '\n' + 
+							'`*time bot` Show general bot statistics' + '\n' + 
+							'`*time in [region]` Show the time in a zone' + '\n'
 					},
 					{
 						name: 'How do I get it on my server?',
@@ -222,7 +222,7 @@ module.exports.run = function (msg) {
 					color: colorConfig.neutral,
 					title: botConfig.title,
 					url: '',
-					description: '`!time defaults` Original defaults for this bot.',
+					description: '`*time defaults` Original defaults for this bot.',
 					fields: [{
 						name: 'Preview: ' + moment().tz(defaultConfig.zone).format(defaultConfig.format),
 						value: '**Timezone**: `' + defaultConfig.zone + '`' + '\n' + 
@@ -236,7 +236,7 @@ module.exports.run = function (msg) {
 				msg.channel.send(new Discord.RichEmbed({
 					color: colorConfig.neutral,
 					title: botConfig.title,
-					description: '`!time in [zone]` Check a timezone!',
+					description: '`*time in [zone]` Check a timezone!',
 					url: '',
 					fields: [{
 						name: 'You requested ' + command[2],
