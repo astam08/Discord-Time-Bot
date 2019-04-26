@@ -10,13 +10,13 @@
 module.exports = {
 	/**
 	 * @desc Bot username without discriminator
-	 * @default "MyTimeBot"
+	 * @default "Tukang Jam"
 	 * @type string
 	 */
 	name: "Tukang Jam",
 	/**
 	 * @desc Global bot command prefix
-	 * @default "?"
+	 * @default "*"
 	 * @type string
 	*/
 	prefix: "*",
@@ -28,8 +28,8 @@ module.exports = {
 	token: "NTYzMjU2MDg0Nzk4NzY3MTE0.XMJ0cQ.nF-fXSE0qdRoOlofimHOUXwgqog",
 	/** 
 	 * @desc Global bot response heading
-	 * @default "\uD83D\uDD52 Discord Time Bot"
+	 * @default "\uD83D\uDD52 Tukang Jam"
 	 * @type string
 	 */
-	title: "\uD83D\uDD52 Discord Time Bot"
+	title: "\uD83D\uDD52 Discord Tukang Jam"
 };
