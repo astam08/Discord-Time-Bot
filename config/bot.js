@@ -13,19 +13,19 @@ module.exports = {
 	 * @default "MyTimeBot"
 	 * @type string
 	 */
-	name: "MyTimeBot",
+	name: "Tukang Jam",
 	/**
 	 * @desc Global bot command prefix
 	 * @default "?"
 	 * @type string
 	*/
-	prefix: "?",
+	prefix: "*",
 	/** 
 	 * @desc Discord API bot token (keep it secret)
 	 * @default "InsertYourTokenHere"
 	 * @type string
 	 */
-	token: "InsertYourTokenHere",
+	token: "NTYzMjU2MDg0Nzk4NzY3MTE0.XMJ0cQ.nF-fXSE0qdRoOlofimHOUXwgqog",
 	/** 
 	 * @desc Global bot response heading
 	 * @default "\uD83D\uDD52 Discord Time Bot"
