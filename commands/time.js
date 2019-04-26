@@ -61,8 +61,8 @@ module.exports.run = function (msg) {
 							url: '',
 							fields: [{
 								name: 'Menambahkan server ke  database..',
-								value: "It looks like this server is in **" + msg.guild.region + "**, so to speed up the process we're setting your default timezone to **" + defaultConfig.zones[msg.guild.region] + "**. \n\n" +
-										"If this is incorrect, or you would like to customize the timezone further, `!time zone` will provide you with more information. You can also use `!time format` to change how the time/date is displayed. \n\n:thumbsup: That's it! You're good to go."
+								value: "Waktu Akan Di Set ke Waktu Server **" + msg.guild.region + "**, Sesuai dengan Zona Yang dibuat **" + defaultConfig.zones[msg.guild.region] + "**. \n\n" +
+										"JIKA ADA YANG SALAH SILAHKAN ATUR ZONA WAKTU DENGAN KETIK, `*time zone` , `*time format` UNTUK DI TAMPILKAN \n\n:thumbsup: ."
 							}]
 						}));
 						let thisServer = {};
