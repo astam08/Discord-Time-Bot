@@ -83,7 +83,7 @@ bot.on('message', handleMessage);
  */
 function handleLogin() {
 	console.log('Discord Time Bot is now online!');
-	bot.user.setActivity('Tukang Jam | ' + botConfig.prefix + 'time');
+	bot.user.setActivity('Tukang Jam');
 	/**
 	 * @desc Time function that updates the bot's nickname in every server
 	 * @function
